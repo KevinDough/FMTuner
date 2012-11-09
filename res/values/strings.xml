@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">FM Tuner</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_scanned__list">Scanned_List</string>
+    <string name="Schedule">Schedule</string>
+    <string name="Scan">Scan</string>
+    <string name="title_activity_schedule_tune">ScheduleTuneActivity</string>
+    <string name="title_activity_welcome__page">Welcome_Page</string>
+
+</resources>
