@@ -72,6 +72,17 @@ public class Scanned_List extends Activity {
 			}
 		});
         
+        Button homeButton = (Button) findViewById(R.id.home);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				goHome();
+				
+			}
+		});
+
+        
     }
     
   //Called when clicking the schedule button. Changes screen and loads selected station to 
@@ -81,6 +92,10 @@ public class Scanned_List extends Activity {
     	Intent deliverSched = new Intent(this, ScheduleTuneActivity.class);
     	deliverSched.putExtra(STATION_CHOSEN, stationId);
     	startActivity(deliverSched);
+    }
+    public void goHome(){
+    	Intent returnHome = new Intent(this, Welcome_Page.class);
+    	startActivity(returnHome);
     }
     
     @Override

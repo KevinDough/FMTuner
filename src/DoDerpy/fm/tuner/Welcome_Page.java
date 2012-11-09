@@ -1,5 +1,6 @@
 package DoDerpy.fm.tuner;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -34,6 +35,14 @@ public class Welcome_Page extends Activity {
 				scan();
 			}
 		});
+        Button openUrl = (Button) findViewById(R.id.listen);
+        openUrl.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				openWebURL("http://google.com");
+			}
+		});
         
     }
 
@@ -50,5 +59,10 @@ public class Welcome_Page extends Activity {
     public void scan(){
     	Intent scanList = new Intent(this, Scanned_List.class);
 		startActivity(scanList);
+    }
+    public void openWebURL( String inURL ) {
+        Intent goToIce = new Intent( Intent.ACTION_VIEW , Uri.parse( inURL ) );
+
+        startActivity( goToIce );
     }
 }
