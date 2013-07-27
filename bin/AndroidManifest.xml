@@ -6,6 +6,11 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
+    
+    
+ <!--    This should be commented in on the phone, off on the emulator -->
+        <uses-permission android:name="android.permission.INTERNET" /> 
+
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -32,6 +37,15 @@
         <activity
             android:name=".Welcome_Page"
             android:label="@string/title_activity_welcome__page" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Finished"
+            android:label="@string/title_activity_finished" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

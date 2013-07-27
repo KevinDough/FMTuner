@@ -40,7 +40,7 @@ public class Welcome_Page extends Activity {
 			
 			@Override
 			public void onClick(View arg0) {
-				openWebURL("http://google.com");
+				openWebURL("http://agile02.cs.newpaltz.edu:8001/example1.ogg");
 			}
 		});
         

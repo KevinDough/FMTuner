@@ -8,5 +8,6 @@
     <string name="Scan">Scan</string>
     <string name="title_activity_schedule_tune">ScheduleTuneActivity</string>
     <string name="title_activity_welcome__page">Welcome_Page</string>
+    <string name="title_activity_finished">Finished</string>
 
 </resources>

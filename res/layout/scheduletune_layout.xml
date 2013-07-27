@@ -1,16 +1,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <Button
-        android:id="@+id/sendSched"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_marginBottom="44dp"
-        android:text="Make it so!" />
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
     <Button
         android:id="@+id/back"
@@ -18,33 +11,58 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Back" />
+        android:text="Back"
+        tools:ignore="HardcodedText" />
+
+    <!--
+         <TimePicker
+        android:id="@+id/schedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+      <DatePicker 
+        android:id="@+id/schedDate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+    -->
 
     <EditText
         android:id="@+id/stationPicked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/back"
         android:layout_alignBottom="@+id/back"
         android:layout_alignParentRight="true"
-        android:hint="Enter Station"
-        android:ems="10" >
-
-        <requestFocus />
+        android:ems="10"
+        android:hint="Enter Station" >
     </EditText>
 
-    <TimePicker
-        android:id="@+id/schedTime"
-        android:layout_width="fill_parent"
+    <Button
+        android:id="@+id/timeChange"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/sendSched"
-        android:layout_alignParentLeft="true" />
-    <DatePicker 
-        android:id="@+id/schedDate"
-        android:layout_width="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="Change Time" />
+
+    <Button
+        android:id="@+id/dateChange"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/schedTime"
-        android:layout_below="@+id/stationPicked"
-        />
+        android:layout_alignBaseline="@+id/timeChange"
+        android:layout_alignBottom="@+id/timeChange"
+        android:layout_alignParentRight="true"
+        android:text="Change Date" />
+
+    <Button
+        android:id="@+id/sendSched"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/timeChange"
+        android:text="Make it so!" />
 
 </RelativeLayout>
